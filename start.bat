@@ -1,0 +1,3 @@
+@echo off
+echo Launching Network Monitor...
+.\venv\Scripts\python.exe run.py

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Traffic Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Header -->
+        <header class="glass-header">
+            <div class="logo">
+                <div class="glow-orb"></div>
+                <h1>Network Monitor</h1>
+            </div>
+            <div class="controls">
+                <input type="text" id="filterInput" class="glass-input" placeholder="Filter requests (e.g. host, status)">
+                <div class="stat-badge" id="totalTraffic">0 MB</div>
+                <button id="pauseBtn" class="btn">Pause</button>
+                <button id="clearBtn" class="btn">Clear History</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="table-container glass-panel">
+                <table id="trafficTable">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Method</th>
+                            <th>Status</th>
+                            <th>Body</th>
+                            <th>Size</th>
+                            <th class="col-host">Host</th>
+                            <th>Path</th>
+                            <th class="col-type">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trafficBody">
+                        <!-- Rows populated dynamically by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Details Modal -->
+        <div id="detailsModal" class="modal hidden">
+            <div class="modal-content glass-panel">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Request Details</h2>
+                    <button id="closeModal" class="btn close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-target="reqTab">Request</button>
+                        <button class="tab-btn" data-target="resTab">Response</button>
+                    </div>
+                    <div id="reqTab" class="tab-content active">
+                        <div class="section-title">Headers</div>
+                        <pre id="reqHeaders" class="code-block"></pre>
+                        <div class="section-title">Body</div>
+                        <pre id="reqBody" class="code-block"></pre>
+                    </div>
+                    <div id="resTab" class="tab-content hidden">
+                        <div class="section-title">Headers</div>
+                        <pre id="resHeaders" class="code-block"></pre>
+                        <div class="section-title">Body</div>
+                        <pre id="resBody" class="code-block"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

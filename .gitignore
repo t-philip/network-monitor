@@ -1,0 +1,20 @@
+# Virtual environment — created locally by setup.bat, ~96 MB
+venv/
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# mitmproxy CA material. Never commit this: anyone holding the private key can
+# impersonate any website to a machine that trusts the certificate.
+.mitmproxy/
+*.p12
+*.pem
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
