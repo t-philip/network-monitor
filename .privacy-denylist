@@ -1,0 +1,3 @@
+# Terms specific to this repo. One extended-regex per line.
+# A traffic inspector must never publish real hostnames it observed.
+[a-z0-9-]+\.(lan|local|internal|home)
