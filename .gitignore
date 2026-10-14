@@ -18,3 +18,6 @@ __pycache__/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Private vocabulary for scripts/check_privacy.sh -- local only, never committed.
+/.privacy-denylist.private
