@@ -235,7 +235,7 @@ means believed correct from the code but not deliberately exercised.
 | 2 | Live streaming to the dashboard over WebSocket | **Verified** |
 | 3 | Detail modal shows headers and text bodies | **Verified** |
 | 4 | Proxy set on start, restored on Ctrl+C | **Verified** |
-| 5 | Ungraceful close leaves proxy set | **Verified** — that is how the behaviour was discovered |
+| 5 | Ungraceful close leaves proxy set | **Verified** — reproduced by closing the terminal window |
 | 6 | Binary body download via `/api/body` | **Verified** |
 | 7 | Row/body eviction at the 500 caps | **Unverified** — logic is straightforward, long sessions not deliberately soak-tested |
 | 8 | 20 MB `too_large` path | **Unverified** — not deliberately exercised with an oversized body |
